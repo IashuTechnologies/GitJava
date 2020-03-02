@@ -18,7 +18,7 @@ public class GyUtil {
 	 * @return Connection
 	 */
 	public  Connection getDBConnection(){
-		println("Begin getConnectionForLamda  ");
+		println("Begin getConnectionForLamda 123 10th Sep 2019 ");
 	
 		
 		Connection con = null;
@@ -27,16 +27,18 @@ public class GyUtil {
 		String dbUser = instanceUtil.loadConfig().getProperty(APIConstant.dbUser);
 		String password = instanceUtil.loadConfig().getProperty(APIConstant.dbPassword);
 		
-		println("dbUrl & user "+dburl +":"+dbUser);
+		
+		
+		println("dbUrl & user 0th Sep 2019 "+dburl +":"+dbUser);
 		
 		try{  
 			Class.forName("com.mysql.jdbc.Driver");  
 			con=DriverManager.getConnection(dburl,dbUser,password);
 			
 			if(con!=null){
-				println("Got connection  "+con);
+				println("Got connection 0th Sep 2019 "+con);
 			}else {
-				println("Connection failed  ");
+				println("Connection failed 0th Sep 2019 ");
 			}
 		}catch(Exception e){ 
 			println("Connection  "+e.toString());

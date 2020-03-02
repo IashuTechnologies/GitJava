@@ -35,6 +35,7 @@ public class LambdaJavaAPI implements RequestHandler<Map<String, String>,Respons
   */
   @Override
   public ResponseBean handleRequest(Map<String, String> input, Context s) {
+	  println("Begin calling LamdaJava handleRequest >>>>");
 	    ArrayList<ProductBean> productList = new ArrayList<ProductBean>();
         Connection conn = null;
         PreparedStatement pstmt = null;
@@ -100,7 +101,7 @@ public class LambdaJavaAPI implements RequestHandler<Map<String, String>,Respons
 	 ResponseBean bean = new ResponseBean();
 	 bean.setStatus("OK");
 	 bean.setProducts(productList);
-	
+	 println("End calling LamdaJava handleRequest >>>>");
 	 return bean;
 
         
